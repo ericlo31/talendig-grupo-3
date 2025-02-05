@@ -26,14 +26,14 @@
     </style>
     <script>
         function calcularEdad() {
-           let anioNacimiento = prompt("Ingrese su año de nacimiento");
+            let anioNacimiento = prompt("Ingrese su año de nacimiento");
             let anioActual = new Date().getFullYear();
             let edad = anioActual - anioNacimiento;
             alert(`Tienes ${edad} años.`);
         }
 
         function puedeVotar() {
-           let edad = prompt("Ingrese su edad");
+            let edad = prompt("Ingrese su edad");
             if (edad >= 18) {
                 alert("Puedes votar.");
             } else {
@@ -43,17 +43,15 @@
 
         //Muestra un alert() indicando si numero es par o impar
         function verificarNumeroPares() {
-            let numero = prompt("Ingrese un numero");
-            if (numero % 2 === 0){
-                alert("Numero par");
-            } else {
-                alert("Numero inpar");
-            }
+            const verificar = prompt("Ingrese un numero")
+            const resultado = verificar % 2 === 0 ? "Numero par" : "Numero inpar";
+            let mensaje = resultado;
+            alert(mensaje);
         }
 
         //Muestra un alert() indicando si la edad es mayor o igual que 18 puede conducir
         function puedeConducir() {
-           let edad = prompt("Ingrese su edad");
+            let edad = prompt("Ingrese su edad");
             if (edad >= 18) {
                 alert("Puedes conducir.");
             } else {
@@ -65,12 +63,12 @@
         function compararNumeros() {
             let num1 = prompt("Ingrese un numero");
             let num2 = prompt("Ingrese otro numero");
-            if (num1 > num2){
+            if (num1 > num2) {
                 alert(num1 + " es mayor que " + num2)
             } else if (num1 < num2) {
                 alert(num1 + " es menor que " + num2)
             } else {
-                alert (num1 + " es igual que " + num2)
+                alert(num1 + " es igual que " + num2)
             }
         }
 
@@ -80,14 +78,14 @@
         // 7-10 - Otoño
         // 10-12 Invierno
         function estacionDelAnio() {
-           let mes = prompt("Ingrese un mes del año");
-            if (mes >= 1 && mes <= 3){
+            let mes = prompt("Ingrese un mes del año");
+            if (mes >= 1 && mes <= 3) {
                 alert("Primavera");
-            } else if (mes >= 4 && mes <= 6){
+            } else if (mes >= 4 && mes <= 6) {
                 alert("Verano");
-            } else if (mes >= 7 && mes <= 10){
+            } else if (mes >= 7 && mes <= 10) {
                 alert("Otoño");
-            } else if (mes >= 10 && mes <= 12){
+            } else if (mes >= 10 && mes <= 12) {
                 alert("Invierno");
             } else {
                 alert("Y eso es un mes abusador?")
@@ -104,22 +102,22 @@
 
         //Muestra un alert() a partir del dia de la semana mostrar el dia seleccionado
         function determinarDiaSemana(numero) {
-            let semana = ["domingo","lunes","martes","miercoles","jueves","viernes","sabado"];
+            let semana = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
             alert(semana[numero]);
         }
 
         //Muestra un alert() con un numero aleatoria
         function generarNumeroAleatorio() {
-            let numero = Math.random()+1;
+            let numero = Math.random() + 1;
             alert(numero)
         }
 
         //Muestra un alert() indicando si un numero es positivo o negativo
         function determinarPositivoNegativo() {
             let numero = prompt("Ingrese un numero");
-            if (numero > 0){
+            if (numero > 0) {
                 alert(numero + " Es Positivo")
-            } else if (numero < 0){ 
+            } else if (numero < 0) {
                 alert(numero + " Es Negativo")
             } else {
                 alert(numero + " Es cero")
@@ -140,7 +138,7 @@
 <body id="ejercicio-practico-js">
     <h1>Ejercicios de JavaScript</h1>
     <button class="boton-accionable" onclick="calcularEdad(2000)">Calcular Edad</button>
-    <button class="boton-accionable" onclick="verificarNumero(10)">Verificar Número Par/Impar</button>
+    <button class="boton-accionable" onclick="verificarNumeroPares(10)">Verificar Número Par/Impar</button>
     <button class="boton-accionable" onclick="puedeConducir(18)">Verificar Permiso de Conducción</button>
     <button class="boton-accionable" onclick="compararNumeros(8, 12)">Comparar Dos Números</button>
     <button class="boton-accionable" onclick="estacionDelAnio(7)">Determinar Estación del Año</button>
