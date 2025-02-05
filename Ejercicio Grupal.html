@@ -34,9 +34,9 @@
 
         function puedeVotar(edad) {
             if (edad >= 18) {
-                alert("Puedes votar.");
+                alert("Tienes: " + edad + " años. Puedes votar.");
             } else {
-                alert("No puedes votar.");
+                alert("Tienes: " + edad + " años. Puedes votar.");
             }
         }
 
@@ -52,9 +52,9 @@
         //Muestra un alert() indicando si la edad es mayor o igual que 18 puede conducir
         function puedeConducir(edad) {
             if (edad >= 18) {
-                alert("Puedes conducir.");
+                alert("Tienes: " + edad + " años. Puedes conducir.");
             } else {
-                alert("No puedes conducir.");
+                alert("Tienes: " + edad + " años. No puedes conducir.");
             }
         }
 
@@ -84,7 +84,7 @@
             } else if (mes >= 10 && mes <= 12){
                 alert("Invierno");
             } else {
-                alert("Y eso es un mes abusador?")
+                alert("¿Y eso es un mes? Abusador!")
             }
         }
 
@@ -97,7 +97,7 @@
 
         //Muestra un alert() a partir del dia de la semana mostrar el dia seleccionado
         function determinarDiaSemana(numero) {
-            let semana = ["domingo","lunes","martes","miercoles","jueves","viernes","sabado"];
+            let semana = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
             alert(semana[numero]);
         }
 
